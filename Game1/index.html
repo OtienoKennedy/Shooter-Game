@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shooter Game</title>
+    <style>
+        body { text-align: center; background-color: black; color: white; font-family: Arial, sans-serif; }
+        canvas { background: black; display: block; margin: auto; border: 2px solid white; }
+        #controls { margin-top: 20px; display: flex; justify-content: center; }
+        button { padding: 10px 20px; background-color: #4CAF50; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px; }
+        button:disabled { background-color: gray; cursor: default; }
+        #volumeControl { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Simple Shooter Game</h1>
+    <p>Move your mouse left or right to aim</p>
+    <canvas id="gameCanvas"></canvas>
+    <div id="controls">
+        <button id="startGameButton">Start Game</button>
+        <button id="pauseButton" style="display: none;">Pause</button>
+        <button id="resumeButton" style="display: none;">Resume</button>
+        <button id="restartButton" style="display: none;">Restart</button>
+        <button id="quitButton" style="display: none;">Quit</button>
+        <button id="testAudioButton">Test Audio</button>
+    </div>
+    <div id="volumeControl">
+        <label for="volumeSlider">Volume:</label>
+        <input type="range" id="volumeSlider" min="0" max="10" value="10">
+    </div>
+    <audio id="gameMusic" loop preload="auto">
+        <source src="game.m4a.m4a" type="audio/mp4">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="game.js"></script>
+</body>
+</html>
